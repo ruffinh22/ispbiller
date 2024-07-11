@@ -1,0 +1,22 @@
+<!-- templates/billing/subscription_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscription List</title>
+</head>
+<body>
+    <h1>Subscriptions</h1>
+    <ul>
+        {% for subscription in subscriptions %}
+        <li>
+            <strong>Client:</strong> {{ subscription.client.name }}<br>
+            <strong>Plan:</strong> {{ subscription.plan_name }}<br>
+            <strong>Price:</strong> ${{ subscription.price }}<br>
+            <strong>Start Date:</strong> {{ subscription.start_date }}<br>
+            <strong>End Date:</strong> {{ subscription.end_date }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
